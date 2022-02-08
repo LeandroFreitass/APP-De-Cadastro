@@ -39,5 +39,8 @@ export default function Slider({ navigation }) {
       </View>
     )
   }
-  return <AppIntroSlider renderItem={renderSlides} data={slides} bottomButton />
+  return <AppIntroSlider 
+  renderItem={renderSlides} 
+  data={slides} 
+  bottomButton/>
 }

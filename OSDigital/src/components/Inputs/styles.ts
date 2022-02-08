@@ -5,7 +5,9 @@ import { theme } from '../../styles/theme'
 export const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    width: 270,
+    width: '80%',
+    marginVertical: 5,
+    paddingHorizontal: 10,
     backgroundColor: 'white',
     borderRadius: 5,
     height: 50,
@@ -18,7 +20,7 @@ export const styles = StyleSheet.create({
   title: {
     width: '80%',
     height: 50,
-    color: theme.colors.secondary100,
+    color: theme.colors.secondary85,
     padding: 8,
     fontSize: 18,
     textDecorationColor: theme.colors.secondary100

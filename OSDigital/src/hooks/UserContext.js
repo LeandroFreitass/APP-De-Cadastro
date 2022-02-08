@@ -6,7 +6,7 @@ import React, {createContext, useContext, useEffect, useState} from 'react';
 const UserContext = createContext({});
 
 export const UserProvider = ({children}) => {
-  const [userData, setUserData] = useState({});
+  const [userData, setUserData] = useState({ nome: 'BLABLA'});
 
   const putUserData = async userInfo => {
     setUserData(userInfo);
@@ -16,6 +16,33 @@ export const UserProvider = ({children}) => {
       JSON.stringify(userInfo),
     );
   };
+
+  const signIn = async ({ email, password }) => {
+
+    if (!email || !password) {
+      console.warn('Preencha todos os campos!');
+      return;
+    }
+
+    try {
+      const login = await api.post('/users/authenticate', {
+        Email: email, 
+        User_Password: password, 
+      }) 
+  
+      AsyncStorage.clear()
+      AsyncStorage.setItem('TOKEN', user.Device_Id)
+
+      console.log(login)
+    } catch (err) {
+      console.warn('Erro: ' + err.message)
+    }
+
+    
+    // await loadSignatureByUser(user.id)
+    // await setUserData(user)
+    // await validateDequimentCustomer(user.Company[0]?.id)
+  }
 
   useEffect(() => {
     const loadUserData = async () => {

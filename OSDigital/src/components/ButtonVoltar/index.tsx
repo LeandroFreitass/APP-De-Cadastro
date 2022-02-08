@@ -1,7 +1,7 @@
 import React from 'react'
 import { TouchableOpacityProps } from 'react-native'
 
-import { ButtonTouch, TextBt, TextBt_PRIMARY } from './styles'
+import { ButtonTouch, TextBt} from './styles'
 
 type Props = TouchableOpacityProps & {
   title: string

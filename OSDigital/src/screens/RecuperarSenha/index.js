@@ -21,7 +21,7 @@ export default function Recuperar() {
         <RecuperarButton title="Recuperar senha" />
         <VoltarButton
           title="Voltar para Login"
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate('Login')}
         />
       </View>
     </KeyboardAvoidingView>

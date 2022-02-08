@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native'
 import { theme } from '../../styles/theme'
 
 export const styles = StyleSheet.create({
-  container: {
+  buttonEntrar: {
     backgroundColor: theme.colors.primary,
     width: 321,
     height: 51.91,
